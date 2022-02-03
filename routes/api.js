@@ -2743,7 +2743,7 @@ router.get('/nhentai2', async(req, res, next) => {
   if(!apikey) return res.json(loghandler.notparam)
   
   if(listkey.includes(apikey)){
-    fetch(encodeURI(`https://api.lolhuman.xyz/api/nhentai/${wan}?apikey=MAULxMHDC`))
+    fetch(encodeURI(`https://api.lolhuman.xyz/api/nhentai/${wa}?apikey=MAULxMHDC`))
     .then(response => response.json())
         .then(hasil => {
 
