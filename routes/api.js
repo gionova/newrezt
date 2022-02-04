@@ -4964,6 +4964,29 @@ router.get('/kuis/tebakGambar', async (req, res, next) => {
 **/
 
 
+router.get("/photooxy/romantic", async(req, res, next) => {
+  const text1 = req.query.text;
+  const apikey = req.query.apikey;
+  if(!text1) return res.json(loghandler.nottext1)
+  if(!apikey) return res.json(loghandler.notparam)
+  if(listkey.includes(apikey)){
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/romantic-messages-for-your-loved-one-391.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
+    })
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
+});
 
 router.get("/photooxy/shadow", async(req, res, next) => {
   const text1 = req.query.text;
@@ -4971,46 +4994,22 @@ router.get("/photooxy/shadow", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pShadow(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/shadow-text-effect-in-the-sky-394.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
-});
-
-router.get("/photooxy/romantic", async(req, res, next) => {
-  const text1 = req.query.text;
-  const apikey = req.query.apikey;
-  if(!text1) return res.json(loghandler.nottext1)
-  if(!apikey) return res.json(loghandler.notparam)
-  if(listkey.includes(apikey)){
-  pRomantic(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
-    })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
 
 // @PHOTOOXY
@@ -5021,22 +5020,22 @@ router.get("/photooxy/smoke", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pSmoke(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
 
 router.get("/photooxy/burn-papper", async(req, res, next) => {
@@ -5045,22 +5044,22 @@ router.get("/photooxy/burn-papper", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pBurnPapper(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/write-text-on-burn-paper-388.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
 
 router.get("/photooxy/naruto", async(req, res, next) => {
@@ -5069,22 +5068,22 @@ router.get("/photooxy/naruto", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pNaruto(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
 
 router.get("/photooxy/love-message", async(req, res, next) => {
@@ -5093,22 +5092,22 @@ router.get("/photooxy/love-message", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pLoveMsg(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/create-a-picture-of-love-message-377.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
 
 router.get("/photooxy/message-under-grass", async(req, res, next) => {
@@ -5117,24 +5116,23 @@ router.get("/photooxy/message-under-grass", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pMsgGrass(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/make-quotes-under-grass-376.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
-
 router.get("/photooxy/glitch", async(req, res, next) => {
   const text1 = req.query.text1;
   const text2 = req.query.text2;
@@ -5143,22 +5141,22 @@ router.get("/photooxy/glitch", async(req, res, next) => {
   if(!text2) return res.json(loghandler.nottext2)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pGlitch(text1, text2)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/make-tik-tok-text-effect-375.html", [
+    text1, text2
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
 
 router.get("/photooxy/double-heart", async(req, res, next) => {
@@ -5167,22 +5165,22 @@ router.get("/photooxy/double-heart", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pDoubleHeart(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/love-text-effect-372.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
 
 router.get("/photooxy/coffe-cup", async(req, res, next) => {
@@ -5191,22 +5189,22 @@ router.get("/photooxy/coffe-cup", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pCoffeCup(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/put-any-text-in-to-coffee-cup-371.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
 
 router.get("/photooxy/love-text", async(req, res, next) => {
@@ -5215,47 +5213,47 @@ router.get("/photooxy/love-text", async(req, res, next) => {
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pLoveText(text1)
-    .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/love-text-effect-372.html", [
+    text,
+  ])
+  .then((data) => {
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(error)
-    });
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
-
 router.get("/photooxy/butterfly", async(req, res, next) => {
   const text1 = req.query.text;
   const apikey = req.query.apikey;
   if(!text1) return res.json(loghandler.nottext1)
   if(!apikey) return res.json(loghandler.notparam)
   if(listkey.includes(apikey)){
-  pButterfly(text1)
+  zrapi 
+  .photooxy("https://photooxy.com/logo-and-text-effects/butterfly-text-with-reflection-effect-183.html", [
+    text,
+  ])
   .then((data) => {
-      const result = {
-        status: true,
-        code: 200,
-        creator: `${creator}`,
-        result: data.url
-      }
-      res.json(result)
+    res.json({
+      status: true,
+      code: 200,
+      creator: `${creator}`,
+      result: data
     })
-    .catch((error) => {
-      res.json(loghandler.error)
-    })
-    } else {
-    	res.json(loghandler.invalidKey)
-    }
+  })
+  .catch((err) => console.log(err));
+  } else {
+    res.json(loghandler.invalidKey)
+  }
 });
+
 
 /*
 @ AKHIR PHOTOOXY
@@ -5274,7 +5272,7 @@ router.get('/photooxy/army', async(req, res, next) => {
   
   if(listkey.includes(apikey)){
     zrapi 
-  .textpro("https://photooxy.com/logo-and-text-effects/army-camouflage-fabric-text-effect-221.html", [
+  .photooxy("https://photooxy.com/logo-and-text-effects/army-camouflage-fabric-text-effect-221.html", [
     text,
   ])
   .then((data) => {
