@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/apiinvibot/public_html/
+    - /bin/cp views/docs-1.html $DEPLOYPATH
+    - /bin/cp routes/api.js $DEPLOYPATH
